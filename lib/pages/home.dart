@@ -21,8 +21,8 @@ class _HomeState extends State<Home> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-        Padding(
-          padding: const EdgeInsets.all(20.0),
+        const Padding(
+          padding: EdgeInsets.all(20.0),
           child: Text(
             'Simple Animation Flutter',
             style: TextStyle(
@@ -36,31 +36,31 @@ class _HomeState extends State<Home> {
           onPressed: () {Navigator.pushNamed(context, '/containeranimation');}, 
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.red,
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           ), 
-          icon: Icon(
+          icon: const Icon(
             Icons.dashboard), 
-          label: Text('Container')
-          ),
-        ElevatedButton.icon(
-          onPressed: () {Navigator.pushNamed(context, '/heroanimation');},
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-          ), 
-          icon: Icon(
-            Icons.animation), 
-          label: Text('Hero')
+          label: const Text('Container')
           ),
         ElevatedButton.icon(
           onPressed: () {Navigator.pushNamed(context, '/loading');}, 
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.red,
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           ), 
-          icon: Icon(
+          icon: const Icon(
             Icons.history), 
-          label: Text('Loading')
+          label: const Text('Loading')
+          ),
+        ElevatedButton.icon(
+          onPressed: () {Navigator.pushNamed(context, '/heroanimation');},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.red,
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+          ), 
+          icon: const Icon(
+            Icons.animation), 
+          label: const Text('Hero')
           )
         ],
       ),

@@ -137,7 +137,7 @@ class _SwitchExampleState extends State<SwitchExample> {
         setState(() {
           light = value;
         });
-        //memanggil callback function untuk update animated containe
+        //memanggil callback function untuk update animated container
         widget.onSwitchChanged(value);
       },
     );

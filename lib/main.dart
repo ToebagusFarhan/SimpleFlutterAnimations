@@ -3,14 +3,16 @@ import 'pages/home.dart';
 import 'pages/heroanimation.dart';
 import 'pages/containeranimation.dart';
 import 'pages/loading.dart';
+import 'pages/trueloading.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
-  initialRoute: '/home',
+  // initialRoute: '/home',
   routes: {
-    '/home' : (context) => Home(),
-    '/heroanimation' : (context) => heroanim(),
-    '/containeranimation' : (context) => otheranim(),
-    '/loading' : (context) => Loading(),
+    '/': (context) => const trueloading(),
+    '/home' : (context) => const Home(),
+    '/heroanimation' : (context) => const heroanim(),
+    '/containeranimation' : (context) => const otheranim(),
+    '/loading' : (context) => const Loading(),
   }
 ));

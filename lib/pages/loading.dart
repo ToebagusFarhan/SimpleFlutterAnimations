@@ -11,13 +11,16 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Loading'),
+        title: const Text('Loading'),
         centerTitle: true,
         backgroundColor: Colors.red,
         elevation: 0,
       ),
-      body: Text('loading'),
+      body: Center(
+        child: Center(child: Text('Aku adalah aku'),)
+        )
     );
   }
 }

@@ -14,12 +14,12 @@ class _heroanimState extends State<heroanim> {
     return Scaffold(
      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text('Hero Animation'),
+        title: const Text('Hero Animation'),
         centerTitle: true,
         backgroundColor: Colors.red,
         elevation: 0,
       ),
-      body: Text('heroanim'),
+      body: const Text('heroanim'),
     );
   }
 }
