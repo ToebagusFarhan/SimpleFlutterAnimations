@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class otheranim extends StatefulWidget {
-  const otheranim({Key? key}) : super(key: key);
+class implicit extends StatefulWidget {
+  const implicit({Key? key}) : super(key: key);
 
   @override
-  State<otheranim> createState() => _otheranimState();
+  State<implicit> createState() => _implicitState();
 }
 
-class _otheranimState extends State<otheranim> {
+class _implicitState extends State<implicit> {
   // Value awal
   double _width = 50;
   double _height = 50;

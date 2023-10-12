@@ -16,53 +16,72 @@ class _HomeState extends State<Home> {
     return Scaffold(
     backgroundColor: Colors.white,
     body: 
-    Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        const Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Text(
-            'Simple Animation Flutter',
+    Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Colors.blue, Colors.pink]
+        )
+      ),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          const Text(
+            'Simple Animation on Flutter',
             style: TextStyle(
               fontSize:20,
               fontWeight: FontWeight.bold,
+              color: Colors.white
             ),
           ),
+          const SizedBox(height: 30,),
+          ElevatedButton.icon(
+            onPressed: () {Navigator.pushNamed(context, '/implicit');}, 
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            ), 
+            icon: const Icon(
+              Icons.dashboard), 
+            label: const Text('Implicit')
+            ),
+          const SizedBox(height: 5,),
+          ElevatedButton.icon(
+            onPressed: () {Navigator.pushNamed(context, '/explicit');}, 
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            ), 
+            icon: const Icon(
+              Icons.build), 
+            label: const Text('Explicit')
+            ),
+          const SizedBox(height: 5,),
+          ElevatedButton.icon(
+            onPressed: () {Navigator.pushNamed(context, '/loading');}, 
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 10),
+            ), 
+            icon: const Icon(
+              Icons.history), 
+            label: const Text('Loading')
+            ),
+          const SizedBox(height: 5,),
+          ElevatedButton.icon(
+            onPressed: () {Navigator.pushNamed(context, '/heroanimation');},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 10),
+            ), 
+            icon: const Icon(
+              Icons.animation), 
+            label: const Text('Hero')
+            )
+          ],
         ),
-    
-        ElevatedButton.icon(
-          onPressed: () {Navigator.pushNamed(context, '/containeranimation');}, 
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-          ), 
-          icon: const Icon(
-            Icons.dashboard), 
-          label: const Text('Container')
-          ),
-        ElevatedButton.icon(
-          onPressed: () {Navigator.pushNamed(context, '/loading');}, 
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          ), 
-          icon: const Icon(
-            Icons.history), 
-          label: const Text('Loading')
-          ),
-        ElevatedButton.icon(
-          onPressed: () {Navigator.pushNamed(context, '/heroanimation');},
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-          ), 
-          icon: const Icon(
-            Icons.animation), 
-          label: const Text('Hero')
-          )
-        ],
       ),
     ),
     

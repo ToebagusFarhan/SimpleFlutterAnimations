@@ -13,33 +13,36 @@ class _trueloadingState extends State<trueloading>
   
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    print('Working initstate');
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);//hide status bar
 
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushNamed(context, '/home');
-    }); //delay 3 seconds
+    }); //delay * seconds
 
   }
 
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    print('Dispose is working');
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-    super.dispose();
-  }
 
 
 @override
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-      body:Center(
-        child: LoadingAnimationWidget.staggeredDotsWave(color: Colors.red, size: 50.0)
+      body:Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Colors.blue, Colors.pink]
+          )
+        ),
+        child: Center(
+          child: LoadingAnimationWidget.staggeredDotsWave(color: Colors.white, size: 50.0)
+        ),
       )
     );
   }
+
+ 
+
 }
