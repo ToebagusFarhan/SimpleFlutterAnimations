@@ -70,16 +70,7 @@ class _HomeState extends State<Home> {
             label: const Text('Loading')
             ),
           const SizedBox(height: 5,),
-          ElevatedButton.icon(
-            onPressed: () {Navigator.pushNamed(context, '/heroanimation');},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
-              padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 10),
-            ), 
-            icon: const Icon(
-              Icons.animation), 
-            label: const Text('Hero')
-            )
+          
           ],
         ),
       ),

@@ -14,15 +14,21 @@ class _trueloadingState extends State<trueloading>
   @override
   void initState() {
     super.initState();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);//hide status bar
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, 
+    overlays: []);//hide status bar
 
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushNamed(context, '/home');
     }); //delay * seconds
 
   }
 
-
+@override
+void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+    overlays: SystemUiOverlay.values);
+     super.dispose();
+  }
 
 @override
   Widget build(BuildContext context) {

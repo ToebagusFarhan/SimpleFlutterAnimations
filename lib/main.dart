@@ -1,9 +1,10 @@
+import 'package:elgato/pages/explicit.dart';
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
-import 'pages/heroanimation.dart';
 import 'pages/Implicit.dart';
 import 'pages/loading.dart';
 import 'pages/trueloading.dart';
+import 'pages/physicbased.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -11,9 +12,10 @@ void main() => runApp(MaterialApp(
   routes: {
     '/': (context) => const trueloading(),
     '/home' : (context) => const Home(),
-    '/heroanimation' : (context) => const heroanim(),
     '/implicit' : (context) => const implicit(),
+    '/explicit' :(context) => const explicit(),
     '/loading' : (context) => const Loading(),
+    '/physics' : (context) => const PhysicsCardDragDemo(),
   }
 ));
 
